@@ -26,20 +26,3 @@ A tip-of-the-hat to [Johnny Broadway](https://gist.github.com/jbroadway/2836900#
 To play, I created a simple table with a primary key and a clob field. I tossed my markdown text into the clob with SQL developer and run the code. I've included a sample of the calling code in the package. The functions are overloaded to accommodate both clob and varchar2.
 
 As a coder, I am far happier writing PL/SQL then anything in regexp. I can document and read PL/SQL phrases. A reader may notice a blending of approaches. I would rather write more and get clarity and simplify debugging then have code that is so dense you can't see errors. 
-
-'''sql
-declare
-	l_clob 			clob;
-begin
-for c in (
-	select
-		markup_pk,
-		markup_clob
-	from mrk_clob
-	where markup_pk = 1
-	) loop
-	l_clob := markdown_2_html.md_2_html(c.markup_clob);
-end loop; -- clob loop
-dbms_output.put_line(l_clob);
-end;
-'''

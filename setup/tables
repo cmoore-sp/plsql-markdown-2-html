@@ -1,3 +1,13 @@
+```sql
+CREATE TABLE "MRK_CLOB" (
+  "MARKDOWN_PK" NUMBER GENERATED ALWAYS AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOT NULL ENABLE, 
+	"MARKDOWN_CLOB" CLOB, 
+	CONSTRAINT "MARKDOWN" PRIMARY KEY ("MARKDOWN_PK")
+  USING INDEX (CREATE UNIQUE INDEX "MARKDOWN_PK" ON "MRK_CLOB" ("MARKDOWN_PK")) 
+  ) ;
+```
+# Code for updating the clob
+```sql
 update mrk_clob set
 	markdown_clob = '
 # Header 1
@@ -63,3 +73,4 @@ And other table with limited header stuff. All columns are left aligned
 | zebra stripes | are neat      |    $1 |
 
 eof'
+```

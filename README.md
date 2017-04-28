@@ -13,6 +13,18 @@ UL/OL lists are treated as flat. It is not possible with this code to nest lists
 ### Issue with underscore in link URL
 There maybe an issue with underscores inside a link's URL.
 
+### Headers Definitions
+I did not include the alternate underline-ish means for defining headers. 
+```
+These styles are NOT included:
+
+Alt-H1
+======
+
+Alt-H2
+------
+```
+
 ## Variations
 In the code there are some variations for accommodating newline codes (cr, crlf). With a quick code change, or a new parameter, you can opt to return text with HTML breaks or cr or crlf. 
 

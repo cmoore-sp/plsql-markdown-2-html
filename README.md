@@ -38,3 +38,6 @@ A tip-of-the-hat to [Johnny Broadway](https://gist.github.com/jbroadway/2836900#
 To play, I created a simple table with a primary key and a clob field. I tossed my markdown text into the clob with SQL developer and run the code. I've included a sample of the calling code in the package. The functions are overloaded to accommodate both clob and varchar2.
 
 As a coder, I am far happier writing PL/SQL then anything in regexp. I can document and read PL/SQL phrases. A reader may notice a blending of approaches. I would rather write more and get clarity and simplify debugging then have code that is so dense you can't see errors. 
+
+## Sample Files
+hey, I tried to post a sample data set. Part of the markdown is being parsed by github. Try editing the file and pulling the raw text.
